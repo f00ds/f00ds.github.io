@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xccdf:Tailoring xmlns:xccdf="http://checklists.nist.gov/xccdf/1.2" id="xccdf_scap-workbench_tailoring_default">
+  <xccdf:benchmark href="C:/Program Files (x86)/scap-workbench/ssg/ssg-rhel8-ds.xml"/>
+  <xccdf:version time="2025-06-13T01:00:27">1</xccdf:version>
+  <xccdf:Profile id="xccdf_org.ssgproject.content_profile_cis_customized-12" extends="xccdf_org.ssgproject.content_profile_cis">
+    <xccdf:title xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US" override="true">CIS Red Hat Enterprise Linux 8 Benchmark for Level 2 - Server [CUSTOMIZED]</xccdf:title>
+    <xccdf:description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US" override="true">This profile defines a baseline that aligns to the "Level 2 - Server"
+configuration from the Center for Internet Security® Red Hat Enterprise
+Linux 8 Benchmark™, v2.0.0, released 2022-02-23.
+
+This profile includes Center for Internet Security®
+Red Hat Enterprise Linux 8 CIS Benchmarks™ content.</xccdf:description>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_disk_partitioning" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_var_tmp" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_var_log_audit" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_var_log" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_var" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_usr" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_tmp" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_srv" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_opt" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_home" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_partition_for_boot" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_encrypt_partitions" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_home_grpquota" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_home_usrquota" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_var_log_nodev" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_var_log_audit_nosuid" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_var_log_audit_noexec" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_var_log_audit_nodev" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_tmp_nosuid" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_tmp_noexec" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_tmp_nodev" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_home_nosuid" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_home_nodev" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_mount_option_home_noexec" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_kernel_config_ipv6" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_kernel_build_config" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_network-iptables" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_iptables_ruleset_modifications" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_iptables_log_and_drop_suspicious" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_iptables_icmp_disabled" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_set_iptables_default_rule_forward" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_set_iptables_default_rule" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_iptables_activation" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_set_loopback_traffic" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_set_ipv6_loopback_traffic" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_set_ip6tables_default_rule" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_service_iptables_enabled" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_service_ip6tables_enabled" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_package_iptables_installed" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_package_iptables-services_installed" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_configuring_ipv6" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_network_ipv6_limit_requests" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_router_solicitations" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_max_addresses" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_autoconf" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_accept_source_route" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_accept_redirects" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_accept_ra_rtr_pref" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_accept_ra_pinfo" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_accept_ra_defrtr" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_accept_ra" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_router_solicitations" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_max_addresses" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_forwarding" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_autoconf" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_accept_source_route" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_accept_redirects" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_accept_ra_rtr_pref" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_accept_ra_pinfo" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_accept_ra_defrtr" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_accept_ra" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_network_ipv6_static_address" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_network_ipv6_privacy_extensions" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_network_ipv6_default_gateway" selected="false"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_disabling_ipv6" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_default_disable_ipv6" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_sysctl_net_ipv6_conf_all_disable_ipv6" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_network_ipv6_disable_rpc" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_network_ipv6_disable_interfaces" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_kernel_module_ipv6_option_disabled" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_grub2_ipv6_disable_argument" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_network-ipv6" selected="true"/>
+  </xccdf:Profile>
+</xccdf:Tailoring>
